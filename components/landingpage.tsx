@@ -78,10 +78,10 @@ export default function LandingPage() {
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
               <Image src="/placeholder.svg" alt="Logo" width={32} height={32} />
-              <span className="text-xl font-bold">Tulande</span>
+              <span className="text-xl font-bold">TO_Starters</span>
             </Link>
             <nav className="hidden gap-6 md:flex">
-              <Link href="#overview" className="text-sm font-medium transition-colors hover:text-primary">
+              <Link href="#overview" className="text-sm font-medium transition-color hover:text-primary">
                 Program Overview
               </Link>
               <Link href="#signup" className="text-sm font-medium transition-colors hover:text-primary">
@@ -109,7 +109,7 @@ export default function LandingPage() {
           <div className="absolute left-1/4 top-1/4 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/10 blur-3xl" />
           
           <h1 className="mb-4 bg-gradient-to-r from-white via-white to-blue-200 bg-clip-text text-4xl font-bold tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-            Bring Your Business Online with Ease!
+            With Tulande Online, Bring Your Business Online with Ease !
           </h1>
           <p className="mb-12 max-w-[600px] text-xl text-blue-200 sm:text-2xl">
             Your journey from offline to online made simple and effective
@@ -327,7 +327,7 @@ export default function LandingPage() {
       <Button
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full bg-[#1b2e4a] p-0 text-white hover:bg-[#152238]"
         size="icon"
-        onClick={() => window.open('https://wa.me/1234567890', '_blank')}
+        onClick={() => window.open('https://wa.me/+8618834867478', '_blank')}
       >
         <MessageCircle className="h-6 w-6" />
       </Button>
