@@ -1,8 +1,13 @@
+'use client'
+
 import Link from "next/link"
 import Image from "next/image"
+import { useAuth } from "@/lib/auth-context"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
+  const { user, logout } = useAuth()
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -15,9 +20,6 @@ export function Header() {
             <Link href="/#overview" className="text-sm font-medium transition-colors hover:text-primary">
               Program Overview
             </Link>
-            <Link href="/#signup" className="text-sm font-medium transition-colors hover:text-primary">
-              Sign Up
-            </Link>
             <Link href="/#plans" className="text-sm font-medium transition-colors hover:text-primary">
               Lite vs. Pro Plans
             </Link>
@@ -27,12 +29,32 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Button className="bg-white text-[#1b2e4a] hover:bg-[#1b2e4a] hover:text-white" asChild>
-            <Link href="/login">Login</Link>
-          </Button>
-          <Button className="bg-white text-[#1b2e4a] hover:bg-[#1b2e4a] hover:text-white" asChild>
-            <Link href="/register">Get Started</Link>
-          </Button>
+          {user ? (
+            <>
+              <Link
+                href="/dashboard"
+                className="text-sm font-medium transition-colors hover:text-primary"
+              >
+                Dashboard
+              </Link>
+              <Button onClick={logout}>Logout</Button>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-[#1b2e4a] transition-colors hover:bg-[#1b2e4a] hover:text-white"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-[#1b2e4a] transition-colors hover:bg-[#1b2e4a] hover:text-white"
+              >
+                Get Started
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

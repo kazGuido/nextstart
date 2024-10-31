@@ -22,7 +22,7 @@ import { ArrowRight, Check, Globe, Users, Headphones } from "lucide-react"
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#1b2e4a] bg-gradient-to-b from-[#1b2e4a] to-[#152238]">
         <div className="container relative z-10 flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4 rounded-b-3xl bg-[#1b2e4a] bg-gradient-to-b from-[#1b2e4a] to-[#152238] px-4 py-16 text-center md:px-6">
@@ -43,7 +43,7 @@ export default function LandingPage() {
       </section>
 
       {/* Program Overview */}
-      <section id="overview" className="container py-24">
+      <section id="overview" className="container py-24 px-32">
         <h2 className="mb-12 text-center text-3xl font-bold">Why Go Online?</h2>
         <div className="grid gap-8 md:grid-cols-3">
           <Card>

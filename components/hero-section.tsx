@@ -41,7 +41,7 @@ export default function HeroSection() {
         </NavigationMenu>
         <Button className="bg-white text-[#1b2e4a] hover:bg-white/90">Start</Button>
       </header>
-      <main className="container relative px-4 py-16 md:py-24">
+      <main className="container relative">
         {/* Decorative elements */}
         <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-3xl" />
         <div className="absolute left-1/4 top-1/4 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/10 blur-3xl" />
