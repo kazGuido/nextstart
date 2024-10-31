@@ -111,7 +111,7 @@ export default function LandingPage() {
       <section id="contact" className="container py-24">
         <h2 className="mb-12 text-center text-3xl font-bold">Contact Us</h2>
         <div className="mx-auto max-w-md text-center">
-          <p className="mb-4">Have questions or need assistance? We're here to help!</p>
+        <p className="mb-4">Have questions or need assistance? We&apos;re here to help!</p>
           <Button size="lg" className="w-full" asChild>
             <Link href="mailto:contact@tulande.com">Get in Touch</Link>
           </Button>
